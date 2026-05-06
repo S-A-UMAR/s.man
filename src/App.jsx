@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
+import Ticker from './components/Ticker';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Trade from './pages/Trade';
@@ -26,6 +27,7 @@ function App() {
   return (
     <Router>
       <div className="bg-dark min-h-screen selection:bg-gold selection:text-dark">
+        <Ticker />
         <Navbar />
         <main>
           <AnimatedRoutes />

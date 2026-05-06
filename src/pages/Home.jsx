@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Shield, Trophy, Headphones, DollarSign } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Zap, Shield, Trophy, Headphones, DollarSign, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -111,6 +112,52 @@ const Home = () => {
                 <p className="text-gray-400 leading-relaxed">{feat.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 px-4 bg-dark/50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 uppercase tracking-tighter">Common Questions</h2>
+            <p className="text-gray-500 font-medium">Everything you need to know about our elite services</p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              { q: "How long does verification take?", a: "Most verifications are processed within 2-4 hours. Premium clients get priority handling in under 30 minutes." },
+              { q: "Is my data secure?", a: "Absolutely. We use military-grade AES-256 encryption. Your personal data is purged from our active systems immediately after verification." },
+              { q: "What are the transaction limits?", a: "New accounts start with a $5,000 daily limit. This increases as you build trust with the Legit CEO office." },
+              { q: "Can I trade other coins not listed?", a: "Yes. For custom assets or large volume OTC trades, please contact the CEO directly via the VIP Consultation button." }
+            ].map((faq, i) => {
+              const [isOpen, setIsOpen] = useState(false);
+              return (
+                <div key={i} className="border border-white/5 rounded-2xl overflow-hidden bg-white/[0.01]">
+                  <button 
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="w-full p-6 flex justify-between items-center text-left hover:bg-white/5 transition-all"
+                  >
+                    <span className="text-white font-bold">{faq.q}</span>
+                    <ChevronDown className={`text-gray-600 transition-transform ${isOpen ? 'rotate-180 text-gold' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed border-t border-white/5 bg-white/[0.02]">
+                          {faq.a}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
