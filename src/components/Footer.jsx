@@ -1,4 +1,4 @@
-import { ShieldCheck, Instagram, Send, MessageCircle } from 'lucide-react';
+import { Shield, Mail, Phone, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <ShieldCheck className="w-8 h-8 text-gold" />
+              <Shield className="w-8 h-8 text-gold" />
               <span className="text-xl font-bold tracking-tighter text-white">
                 MR S MAN <span className="text-gold">SERVICES</span>
               </span>
@@ -18,7 +18,7 @@ const Footer = () => {
               Led by the Legit CEO, we guarantee reliability and transparency in every transaction.
             </p>
             <div className="flex space-x-4">
-              {[Instagram, Send, MessageCircle].map((Icon, i) => (
+              {[Mail, Phone, MessageSquare].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-dark transition-all">
                   <Icon size={18} />
                 </a>

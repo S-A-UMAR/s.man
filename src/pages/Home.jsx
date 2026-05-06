@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Shield, Trophy, Headphones, BadgeCheck, DollarSign } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Trophy, Headphones, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -118,7 +118,7 @@ const Home = () => {
       {/* Trust Banner */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto p-12 rounded-3xl bg-gradient-to-br from-emerald/10 to-transparent border border-emerald/20 text-center">
-          <BadgeCheck className="w-16 h-16 text-emerald mx-auto mb-6" />
+          <Shield className="w-16 h-16 text-emerald mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-4">Legit CEO Verified</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Our platform operates under strict compliance and transparency protocols. 

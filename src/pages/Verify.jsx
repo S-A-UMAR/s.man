@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BadgeCheck, UserPlus, Send, CheckCircle2, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Shield, UserPlus, Send, CheckCircle2, ChevronRight, ChevronLeft } from 'lucide-react';
 
 const Verify = () => {
   const [step, setStep] = useState(1);
@@ -12,7 +12,7 @@ const Verify = () => {
   });
 
   const services = [
-    { id: 'smv', name: 'Social Media Verification', icon: BadgeCheck, desc: 'Get that blue checkmark on IG, Twitter, or FB.' },
+    { id: 'smv', name: 'Social Media Verification', icon: Shield, desc: 'Get that blue checkmark on IG, Twitter, or FB.' },
     { id: 'pas', name: 'Platform Account Setup', icon: UserPlus, desc: 'Professional setup for Upwork, Fiverr, or LinkedIn.' }
   ];
 

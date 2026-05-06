@@ -60,7 +60,7 @@ const Trade = () => {
                   value={usdAmount}
                   onChange={(e) => setUsdAmount(e.target.value)}
                   placeholder="0.00"
-                  className="w-full bg-dark/80 border border-white/10 rounded-2xl py-5 px-6 text-2xl font-bold text-white focus:outline-none focus:border-gold/50 transition-colors"
+                  className="w-full bg-dark/80 border border-white/10 rounded-2xl py-5 pl-6 pr-20 text-2xl font-bold text-white focus:outline-none focus:border-gold/50 transition-colors"
                 />
                 <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-2">
                   <span className="text-gold font-bold">USDT</span>
